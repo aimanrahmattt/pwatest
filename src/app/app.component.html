@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>JS-jargon</span>
+    <span class="example-spacer"></span>
+    <button mat-raised-button color="accent" (click)="addToHomeScreen()">Add to home screen</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<main>
+  <mat-card *ngFor="let item of items">
+
+    <mat-card-header>
+      <mat-card-title>{{item.name}}</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      {{item.description}}
+    </mat-card-content>
+
+    <mat-card-actions>
+      <a mat-raised-button href="{{item.url}}" color="primary">More</a>
+    </mat-card-actions>
+    
+  </mat-card>
+</main>
+
